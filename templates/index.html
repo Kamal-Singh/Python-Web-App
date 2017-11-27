@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web App</title>
+    <link href="../static/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+    <h1> Collecting heights </h1>
+    <h3> Please fill the entries to get population statistics on height </h3>
+    <div class="message">
+    <h3>{{ text | safe }}</h3>
+    </div>
+    <form action="{{url_for('success')}}" method="POST">
+        <input title="Your Email is safe with us" placeholder="Enter your email here" type="email" name="email_data" required> <br>
+        <input title="Your Data is safe with us" placeholder="Enter your height here" type="number" min="50", max="300" step="0" name="height_data" required> <br>
+        <button type="submit"> Submit </button>
+    </div>
+</body>
+</html>
